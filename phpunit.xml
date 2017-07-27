@@ -1,0 +1,11 @@
+<phpunit bootstrap="./vendor/autoload.php">
+  <testsuites>
+    <testsuite name="PHPSDK">
+        <directory>./tests</directory>
+    </testsuite>
+  </testsuites>
+
+  <logging>
+    <log type="testdox-html" target="./testdox.html"/>
+  </logging>
+</phpunit>
