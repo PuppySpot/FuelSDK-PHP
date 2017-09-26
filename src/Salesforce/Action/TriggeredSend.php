@@ -14,6 +14,11 @@ class TriggeredSend extends CUDSupport
      * @var array            Gets or sets the subscribers. e.g. array("EmailAddress" => "", "SubscriberKey" => "")
      */
     public $subscribers;
+    
+    /**
+     * @var array           Gets or sets the attributes. e.g. array(array("Name" => "PUPPY_NAME", "Value" => "Fido"))
+     */
+    public $attributes;
 
     /**
      * @var int            Gets or sets the folder identifier.
@@ -42,6 +47,7 @@ class TriggeredSend extends CUDSupport
             $this->authStub, 'TriggeredSend', [
             'TriggeredSendDefinition' => $this->props,
             'Subscribers'             => $this->subscribers,
+            'Attributes'              => $this->attributes,
         ]
         );
     }
